@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: my-namespace
+spec:
+  containers:
+  - name: first
+    image: nginx:latest
+    ports:
+    - containerPort: 8080
+  - name: second
+    image: grafana/grafana-oss
+    ports:
+    - containerPort: 8082
